@@ -62,7 +62,8 @@ $(document).ready(function() {
 		shape3 = Comp[2];
 		shape4 = Comp[3];
 	}
-    // run all three functions to get the random values
+	// run all three functions to get the random values
+	// store values in each array
 
 	ComputerChoice(rand);
 	Randshapes(shapes);
@@ -96,18 +97,49 @@ $(document).ready(function() {
    
 	$("button").on("click", function() {
         
-        if (total == randNumber) {
+        if (total === randNumber) {
 			wins++;
 			$("#totalNumber").html(total);
 			$("#wins").html("Wins: " + wins);
+
+			(function() {Restart()});
 		}
 
 		else if (total > randNumber){
 			losses++;
 			$("#totalNumber").html(total);
             $("#losses").html("Losses: " + losses);
-        
+            
+			(function() {Restart()});
 		}
-    });
-    
+	});
+
+	// coded restart function again and still not working
+	// ????????
+	
+	$("button").on("click", function() {
+		if ((total === randNumber) || (total > randNumber)) {
+			(function() {Restart()});
+		}
+	});
+
+
+     
+    // function to reset all values to random and start at 0
+    // this function is not working
+    // ?????????????
+
+	function Restart() {
+
+		shapeNumbers = [];
+		shapes = [];
+		rand = [];
+
+		ComputerChoice(rand);
+		Randshapes(shapes);
+		shapeValues(shapeNumbers);
+
+		total = 0;
+		$("#totalNumber").html(total);
+	}
 });
