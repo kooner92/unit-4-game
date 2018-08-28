@@ -114,20 +114,8 @@ $(document).ready(function() {
 		}
 	});
 
-	// coded restart function again and still not working
-	// ????????
-	
-	// $("button").on("click", function() {
-	// 	if ((total === randNumber) || (total > randNumber)) {
-	// 		(function() {Restart()});
-	// 	}
-	// });
-
-
      
     // function to reset all values to random and start at 0
-    // this function is not working
-    // ?????????????
 
 	function Restart() {
 
