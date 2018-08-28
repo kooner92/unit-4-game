@@ -120,9 +120,8 @@ $(document).ready(function() {
 	function Restart() {
 
 		shapeNumbers = [];
-		shapes = [];
-		rand = [];
-
+		
+		
 		ComputerChoice(rand);
 		Randshapes(shapes);
 		shapeValues(shapeNumbers);
