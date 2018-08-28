@@ -102,7 +102,7 @@ $(document).ready(function() {
 			$("#totalNumber").html(total);
 			$("#wins").html("Wins: " + wins);
 
-			(function() {Restart()});
+		Restart();
 		}
 
 		else if (total > randNumber){
@@ -110,18 +110,18 @@ $(document).ready(function() {
 			$("#totalNumber").html(total);
             $("#losses").html("Losses: " + losses);
             
-			(function() {Restart()});
+		 Restart();
 		}
 	});
 
 	// coded restart function again and still not working
 	// ????????
 	
-	$("button").on("click", function() {
-		if ((total === randNumber) || (total > randNumber)) {
-			(function() {Restart()});
-		}
-	});
+	// $("button").on("click", function() {
+	// 	if ((total === randNumber) || (total > randNumber)) {
+	// 		(function() {Restart()});
+	// 	}
+	// });
 
 
      
